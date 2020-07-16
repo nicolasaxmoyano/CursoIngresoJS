@@ -1,6 +1,18 @@
 function mostrar()
 {
-	//tomo la edad  
-	alert("ok");
+	var edad;
+	edad = txtIdEdad.value;
+	edad = parseInt(edad);
 
-}//FIN DE LA FUNCIÓN
+	if(edad>17)
+	{
+		alert("Es mayor de edad");
+	}
+	else
+	{
+		alert("No es mayor de edad");
+	}
+
+	
+
+}
