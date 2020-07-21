@@ -36,7 +36,7 @@ function Materiales ()
     var anchoTerreno;
     var bolsaCal;
     var bolsaCemento;
-    var cantidadAlambre;
+    var cantidadAlambre;    
     var terrenoTotal;
     
     largoTerreno = txtIdLargo.value;
