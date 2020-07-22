@@ -5,23 +5,26 @@
 
 function mostrar()
 {
-	var notaExamen;
-	notaExamen = parseInt(notaExamen);
+	var notaExamen;  // Al declarar la variable el valor es = undefined
+	
 	notaExamen = Math.floor(Math.random() * 10) + 1;
 	
 	alert(notaExamen);
 
-	if(notaExamen==9 || notaExamen==10)
+	if(notaExamen > 8)
 	{
 		alert("EXCELENTE");
 	}
-	else if(notaExamen>3 && notaExamen<9)
+	else
 	{
-		alert("APROBÓ");
-	}
-	else if(notaExamen>0 && notaExamen<4)
-	{
-		alert("Vamos, la proxima se puede");
+		if(notaExamen > 3)
+		{
+			alert("Aprobó");
+		}
+		else
+		{
+			alert("Vamos, la próxima se puede");
+		}
 	}
 	
-}//FIN DE LA FUNCIÓN
+}

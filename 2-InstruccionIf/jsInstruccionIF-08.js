@@ -4,13 +4,13 @@ Si es mayor y ES soltero = Mostrar "Es soltero y no es menor" */
 function mostrar()
 {
 	var edad;                                   
-	var EstadoCivilUsuario;
+	var estadoCivilUsuario;
 	
 	edad = txtIdEdad.value;
-	EstadoCivilUsuario = estadoCivil.value;
+	estadoCivilUsuario = estadoCivil.value;
 	edad = parseInt(edad);
 
-	if(edad>17 && EstadoCivilUsuario == "Soltero")
+	if(edad>17 && estadoCivilUsuario == "Soltero")
 	{
 		alert("Es soltero y no es menor");
 	}
