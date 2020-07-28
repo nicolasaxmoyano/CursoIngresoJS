@@ -22,13 +22,74 @@ var ingresoBruto;
 cantidadLamparas = txtIdCantidad.value;
 empresa = Marca.value;
 
+cantidadLamparas = parseInt(cantidadLamparas);
 importeFinal = parseInt(importeFinal);
 ingresoBruto = parseInt(ingresoBruto);
 descuentoTotal = parseInt(descuentoTotal);
 
 precioLampara = 35
 
-if(cantidadLamparas>5)
+switch(cantidadLamparas)
+{
+    case 5:
+        switch(empresa)
+        {
+            case "ArgentinaLuz":
+                porcentajeDescuento = 0.4;
+                break;
+            default:
+                porcentajeDescuento = 0.3;
+                break;
+        }
+    case 4:
+        switch(empresa)
+        {
+            case "ArgentinaLuz":
+            case "FelipeLamparas":
+                porcentajeDescuento = 0.25;
+                break;
+            default:
+                porcentajeDescuento = 0.2;
+                break;      
+        }
+    case 3:
+        switch(empresa)
+        {
+            case "ArgentinaLuz":
+                porcentajeDescuento = 0.15;
+                break;
+            case "FelipeLamparas":
+                porcentajeDescuento = 0.1;
+                break;
+            default:
+                porcentajeDescuento = 0.05;
+                break;        
+        }
+    case 2:
+    case 1:
+        porcentajeDescuento = 0;
+        break;
+    default:
+        porcentajeDescuento = 0.5;
+
+}
+
+
+
+descuentoTotal = (cantidadLamparas * precioLampara) * porcentajeDescuento
+importeFinal = (cantidadLamparas * precioLampara) - descuentoTotal
+txtIdprecioDescuento.value = importeFinal
+
+if(importeFinal>119)
+{
+    ingresoBruto = importeFinal*0.1;
+    txtIdprecioDescuento.value = importeFinal + ingresoBruto;
+    alert("Usted pagó " + ingresoBruto + " de IIBB");
+}
+
+
+
+/* if(cantidadLamparas>5)
 {
     porcentajeDescuento= 0.5
 }
@@ -80,22 +141,7 @@ if(cantidadLamparas==3)
             porcentajeDescuento = 0.05;
         }
     }
-}
-
-descuentoTotal = (cantidadLamparas * precioLampara) * porcentajeDescuento
-importeFinal = (cantidadLamparas * precioLampara) - descuentoTotal
-txtIdprecioDescuento.value = importeFinal
-
-if(importeFinal>119)
-{
-    ingresoBruto = importeFinal*0.1;
-    txtIdprecioDescuento.value = importeFinal + ingresoBruto;
-    alert("Usted pagó " + ingresoBruto + " de IIBB");
-}
-
-
-
-
+} */
 
 
 }

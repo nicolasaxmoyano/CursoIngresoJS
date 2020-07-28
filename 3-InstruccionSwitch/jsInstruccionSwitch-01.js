@@ -28,11 +28,6 @@ function mostrar()
 
 	}
 	
-	
-	
-	
-	
-	
 	alert(mesDelAño);
 
 
